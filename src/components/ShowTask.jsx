@@ -1,4 +1,4 @@
-export const ShowTasks = ({taskList, changeStatus, removeTasks})=>{
+export const ShowTask = ({taskList, changeStatus, removeTask})=>{
 
     return <>
     <table>
@@ -15,7 +15,7 @@ export const ShowTasks = ({taskList, changeStatus, removeTasks})=>{
                     <td>{e.task}</td>
                     <td>{e.status ? "Completado" : "No completado"}</td>
                     <td>
-                        <button onClick={() => { removeTasks(i)}}>Eliminar</button>
+                        <button onClick={() => { removeTask(i)}}>Eliminar</button>
                         <button onClick={() => {changeStatus(i)}}>Completar</button> 
                     </td>
                 </tr>
