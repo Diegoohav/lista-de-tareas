@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { AddTask } from './components/AddTask'
+import { ShowTask } from './components/ShowTask'
 
 function App() {
   const [tasks,setTasks] = useState([])
@@ -13,12 +12,13 @@ function App() {
       status: false
     }
     setTasks([...tasks,object])
-    console.log(tasks)
   }
 
   return (
     <>
+    <h1>Administrador de tareas</h1>
       <AddTask addTask={addTask} />
+      <ShowTask taskList= {tasks}/>
     </>
   )
 }
